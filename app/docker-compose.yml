@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  dotnet_app:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash
+
+# buildar 
+# docker compose run dotnet_app bash
+
+# dotnet build
+
+# dotnet run

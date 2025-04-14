@@ -1,0 +1,10 @@
+# Arquivos de build e execução do .NET
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.vs/
+.vs/
+TestResults/
+*.swp
