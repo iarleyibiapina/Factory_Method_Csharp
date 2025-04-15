@@ -5,4 +5,6 @@ public interface ISorvete
     string cobertura(); // chocolate ou morango
 
     string corpo(); // casca ou copo
+
+    void jMostrarInformacoes();
 }

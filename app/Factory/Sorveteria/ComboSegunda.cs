@@ -1,3 +1,5 @@
+using System;
+
 public class ComboSegunda : ISorvete
 {
     public string sabor()
@@ -12,5 +14,10 @@ public class ComboSegunda : ISorvete
 
     public string corpo(){
         return "casquinha";
+    }
+    
+    public void MostrarInformacoes()
+    {
+        Console.WriteLine($"Sabor: {sabor()}, Cobertura: {cobertura()}, Recipiente: {corpo()}");
     }
 }
