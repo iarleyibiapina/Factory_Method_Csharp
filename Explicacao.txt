@@ -1,0 +1,49 @@
+Estrutura do Projeto
+1. Interface ISorvete
+    Define o contrato que todas as classes de sorvete devem seguir:
+    
+    sabor(): Retorna o sabor do sorvete.
+    
+    cobertura(): Retorna a cobertura do sorvete.
+    
+    corpo(): Retorna o recipiente do sorvete.
+
+    MostrarInformacoes(): Exibe as informações do sorvete.
+
+2. Classes Concretas
+    Representam sorvetes específicos com características distintas:
+    
+    ComboSegunda: Sorvete de chocolate com cobertura de morango em uma casquinha.
+    
+    ComboTerca: Sorvete de baunilha com cobertura de chocolate em um copo.
+    
+    Ambas implementam a interface ISorvete.
+
+3. Classe Abstrata SorveteCreator
+    Define o método abstrato CriarSorvete(), que deve ser implementado pelas subclasses concretas para instanciar objetos de sorvete específicos.
+
+4. Criadores Concretos
+    Implementam a classe abstrata SorveteCreator e retornam instâncias de sorvetes concretos:
+
+    SegundaFeiraCreator: Retorna uma instância de ComboSegunda.
+
+    TercaFeiraCreator: Retorna uma instância de ComboTerca.
+
+5. Main
+    Na main, é instanciada um criador especifico do tipo CriadorAbstrato,
+    depois é possivel pegar o objeto criando ele por meio do metodo definido na 
+    classe abstrata, algo como: createObjeto()
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        SorveteCreator creatorSegunda = new SegundaFeiraCreator();
+        ISorvete sorveteSegunda = creatorSegunda.CriarSorvete();
+        sorveteSegunda.MostrarInformacoes();
+
+        SorveteCreator creatorTerca = new TercaFeiraCreator();
+        ISorvete sorveteTerca = creatorTerca.CriarSorvete();
+        sorveteTerca.MostrarInformacoes();
+    }
+}

@@ -1,10 +1,10 @@
 public interface ISorvete
 {
-    string sabor(); // chocolate ou baunilha
+    string sabor(); // sabor do sorvete
 
-    string cobertura(); // chocolate ou morango
+    string cobertura(); // cobertura do sorvete
 
-    string corpo(); // casca ou copo
+    string corpo(); // recipiente do sorvete
 
-    void jMostrarInformacoes();
+    void MostrarInformacoes(); // informacoes do sorvete
 }

@@ -44,7 +44,7 @@ O Factory Method é um padrão criacional que permite a criação de objetos sem
 
 2. **Iniciar o container e acessar o terminal**:
    ```bash
-   docker compose --rm run dotnet_app bash
+   docker compose run --rm dotnet_app bash
    ```
 
 3. **Dentro do container, compile e execute o projeto**:
